@@ -1,3 +1,6 @@
+* Personal addition to this file is on the bottom 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +71,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+- Tech stack:
+
+I wanted to use Bootstrap for this project but eventually gave up to put myself up to the challenge. It's been a while since I wrote pure CSS and regardless of the outcome, I am glad I went with this approach at the end, mainly because it allowed me to face CSS challenges and problem-solve them.
+
+Installed packages: 
+
+React Bootstrap 2.10.4 (unused)
+Bootstrap Icons v1.11.0
+Animate.css v4 (unused)
+
+- Approaching the project:
+
+First I created the project layout (components, section and items placement) after which I started adding CSS styles to make it as similar to the design, as possible. After creating basic styles I tried to make functional components such as popups, filters and carousels. Ultimately, I tried my best to make it mobile-friendly - in other words responsive.
+
+- Challenges:
+
+The biggest challenges I faced with this project were functional carousels (to work and look nice on all devices out there) and the ‘Z z z’ icon in the ‘Happy Sleepers’ review section animation which remained unfinished
+

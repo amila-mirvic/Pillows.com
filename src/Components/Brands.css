@@ -1,0 +1,127 @@
+.brands-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 65px;
+    margin-bottom: 45px;
+  }
+  
+  .brands-heading {
+    margin-bottom: 20px;
+  }
+
+  .brands-heading h2 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #406C93;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+  
+  .cards-row {
+    width: 100%; 
+    padding-left: 81px; 
+    padding-right: 81px; 
+    box-sizing: border-box; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .card-box {
+    width: 188px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 14px 40px #0000000F;
+    cursor: pointer;
+    margin-bottom: 45px;
+    margin-top: 32px;
+  }
+
+  .card-box:hover {
+    transform: scale(1.1);
+  }
+
+  .brands-name {
+    font-size: 20px;
+    color: #1F3951;
+  }
+  
+  .link-row {
+    margin-top: 20px;
+  }
+  
+  .see-more-link {
+    color: #1F3951;
+    text-decoration: none;
+    border-bottom: 1px solid #1F3951 ;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+  
+  }
+  
+  .see-more-link:hover {
+   
+    color: #406C93;
+    border-bottom: 1px solid #406C93 ;
+  }
+
+  /*Responsive*/
+  
+  @media only screen and (max-width: 1024px) {
+    .brands-container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  
+    .cards-row {
+      padding-left: 40px;
+      padding-right: 40px;
+      gap: 20px;
+    }
+  
+    .card-box {
+      width: 150px;
+      height: 90px;
+    }
+  }
+  
+
+  @media only screen and (max-width: 767px) {
+    .brands-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .brands-heading {
+      text-align: center;
+    }
+  
+    .cards-row {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .card-box {
+      width: 100%;
+      max-width: 300px;
+      height: 80px;
+    }
+  
+    .link-row {
+      text-align: center;
+      margin-top: 15px;
+    }
+  }

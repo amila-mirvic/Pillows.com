@@ -1,0 +1,79 @@
+
+
+.main-icon-box-container {
+  background-color: #F8F6F6;
+  text-align: center;
+  padding: 55px 100px 59px 100px;
+  height: 480px;
+  margin: 20px;
+  font-family: 'DM Sans';
+}
+
+.icon-box-heading {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1F3951;
+}
+
+.icon-boxes-container {
+  display: flex;
+  gap: 20px;
+  padding-top: 37px;
+  justify-content: space-around;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  flex: 1;
+  background-color: transparent;
+  max-width: 30%;
+  justify-content: flex-start;
+}
+
+.icon {
+  margin-bottom: 29px;
+  height: 60px;
+}
+
+.iconboxitemheading {
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #1F3951;
+}
+
+.iconboxitemdescription {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1F3951;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .main-icon-box-container {
+    padding: 20px;
+    height: auto;
+  }
+
+  .icon-box-heading {
+    margin: 0;
+    padding: 0;
+  }
+
+  .icon-boxes-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .icon-box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+}

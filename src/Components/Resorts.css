@@ -1,0 +1,417 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin-top: 101px;
+}
+
+.image-box {
+    flex: 0 0 40%;
+    height: 700px;
+    background-color: #FFDD99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    width: 495px;
+    height: 100%;
+    margin-top: -35px;
+    margin-left: 24px;
+    object-fit: cover;
+}
+
+.carousel-box {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.carousel-box-heading {
+    margin-bottom: 20%;
+    margin-top: -17%;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-left: 77px;
+}
+
+.resorts-subheading {
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    color: #406C93;
+}
+
+.resorts-heading-title {
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 36px;
+    color: #1F3951;
+}
+
+
+.carousel-row {
+    margin-left: 40px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Carousel Container */
+.carousels-container {
+    margin-top: -15%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    gap: 120px;
+}
+
+/* Individual Carousel */
+.carousel {
+    width: 297px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -14%;
+    position: relative;
+}
+
+.carousel-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.carousel-item p {
+    text-align: start!important;
+}
+
+.resort-item-title {
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 17px;
+    color: #122230;
+    text-align: start!important;
+}
+
+.resort-item-description {
+    font-family: 'DM Sans';
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #646F78;
+}
+
+.resort-item-price {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 16px;
+    color: #1F3951;
+    
+}
+
+.image-container {
+    position: relative;
+    width: 297px;
+    height: 297px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in;
+}
+
+.carouselbadge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 22px;
+    padding: 4px 8px;
+    font-family: 'DM Sans';
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+/* Badge colors */
+.carouselbadge.red-badge {
+    background-color: #FFEBEB;
+    color: #BE2C2C;
+}
+
+.carouselbadge.blue-badge {
+    background-color: #DFEEF7;
+    color: #406C93;
+}
+
+.carousel-item h3 {
+    margin: 15px 0 10px;
+    font-size: 17px;
+    color: #122230;
+    text-align: center;
+}
+
+.resort-item-description {
+    margin: 5px 0;
+    color: #646F78;
+    text-align: center;
+}
+
+.resort-button {
+    margin-top: 35px;
+    margin-bottom: 45px;
+    height: 50px;
+    width: 280px;
+    padding: 15px 24px;
+    font-size: 13px;
+    color: #406C93;
+    border: 2px solid #406C93;
+    background-color: transparent;
+    border-radius: 4px;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 35%;
+  }
+
+  .resort-button:hover {
+    background-color: #406C93;
+    color: #fff;
+  }
+  
+
+/* Carousel Controls */
+.carousel-controls {
+    position: absolute;
+    top: 35%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    width: 11px;
+    height: 20px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.prev {
+    position: absolute;
+    left: -10px;
+    cursor: pointer;
+}
+
+.next {
+    position: absolute;
+    right: -10px;
+    cursor: pointer;
+}
+
+.spinning-icon {
+    animation: spin 5s linear infinite;
+}
+
+
+/* Price effect for the first carousel item */
+.price-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.resort-item-price.red-price {
+    color: #ED4D4D;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.resort-item-price.original-price {
+    text-decoration: line-through;
+    color: #1F3951;
+    font-size: 16px;
+}
+
+
+
+
+/* Spin Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+ /* Responsive */
+
+ @media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+      height: auto;
+      margin: 0;
+      padding: 0;
+  }
+
+  .image-box {
+      width: 100%;
+      height: auto;
+  }
+
+  .carousel-box {
+      width: 100%;
+      padding: 0 20px;
+      margin-top: 20px;
+  }
+
+  .carousel-box-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin-bottom: 20px;
+      padding: 0;
+  }
+
+  .resorts-subheading {
+      font-size: 16px;
+  }
+
+  .resorts-heading-title {
+      font-size: 30px;
+      text-align: center;
+  }
+
+  .spinning-icon {
+      margin-top: 20px;
+  }
+
+  .heading-column {
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .carousel-row {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+  }
+
+ 
+  .carousels-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .carousel {
+      width: 100%; 
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  .carousel-item {
+      width: 100%;
+      padding: 0;
+  }
+
+  .carousel-controls {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .resort-button {
+      width: 100%;
+      margin: 20px 0;
+  }
+
+  .image-box img {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-column {
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .container {
+      margin: 0;
+      padding: 0;
+  }
+
+  .carousel-row {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+  }
+
+  .carousels-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .carousel {
+      margin-left: 0;
+  }
+
+  .carousel.second-carousel {
+      display: none;
+  }
+
+  .prev {
+      left: -5px;
+  }
+
+  .next {
+      right: -5px;
+  }
+
+  .image-box img {
+      margin: 0;
+      padding: 0;
+  }
+
+  .carousel-item {
+      margin: 0;
+      padding: 0;
+  }
+}
+

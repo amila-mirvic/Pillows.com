@@ -1,0 +1,136 @@
+
+.footer {
+    background-color: #EFF6FB;
+    padding: 66px 81px 17px 81px;
+    font-family: 'DM Sans';
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-column {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #1F3951;
+    text-transform: uppercase;
+  }
+  
+  .footer-column p, .footer-column a, .footer-bottom-text, .footer-bottom-links {
+    margin: 5px 0;
+    font-size: 15px;
+    color: #1F3951;
+    text-decoration: none;
+  }
+  .footer-column h2 {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    color: #1F3951;
+  }
+  
+
+  .search-bar {
+    display: flex;
+    margin: 22px 0 45px 0;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    height: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    color: #1F3951;
+    opacity: 1;
+  }
+
+  .search-bar input:focus {
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 15px 21px;
+    border: none;
+    color: #fff;
+    background-color: #1F3951;
+    border-radius: 0 5px 5px 0;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+   
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    padding-top: 3px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-bottom-links {
+    padding-left: 20px;
+  }
+
+/* Responsive */
+
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    .footer-column {
+      flex: 1;
+      max-width: 100%;
+    }
+    
+    .footer-bottom {
+      flex-basis: 100%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-column {
+      max-width: 50%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
+  }
+  

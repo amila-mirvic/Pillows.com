@@ -1,0 +1,128 @@
+
+.cards-container {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  padding: 80px;
+  justify-content: center;
+}
+
+
+.card {
+  position: relative;
+  overflow: hidden;
+  height: 530px;
+  width: 406px;
+  transition: transform 0.3s ease;
+  border-radius: 0px;
+  border: none !important;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card-1::before {
+  background-image: url('/public/images/IMG_8260.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.card-2::before {
+  background-image: url('/public/images/AdobeStock_353570235.png');
+  background-position: 20%;
+  background-size: cover;
+}
+
+.card-3::before {
+  background-image: url('/public/images/Image 8.png');
+  background-position: top left;
+  background-size: 150%;
+}
+
+.card:hover::before {
+  transform: scale(1.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #fff;
+  z-index: 2;
+  padding-left: 22.5px;
+  padding-top: 22px;
+  width: 40%;
+}
+
+.card-content h2 {
+  font-size: 28px;
+  font-family: 'DM Sans';
+  font-weight: bold;
+  color: #1F3951;
+}
+
+.card-content a {
+  display: block;
+  color: #1F3951;
+  border-bottom: 2px solid #1F3951;
+  text-decoration: none;
+  font-family: 'DM Sans';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .card-content {
+
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr; 
+    padding: 20px;
+  }
+
+  .card {
+    height: 200px; 
+  }
+
+  .card-content h2 {
+    font-size: 20px; 
+  }
+
+  .card-content a {
+    padding: 6px 12px;
+    font-size: 14px; 
+  }
+
+  .card-content {
+
+    width: 100%;
+  }
+
+  .card-3::before {
+    background-position: center center;
+    background-size: 150%;
+  }
+}

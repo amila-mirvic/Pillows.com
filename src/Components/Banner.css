@@ -1,0 +1,98 @@
+
+.banner-container {
+    display: flex;
+    text-align: start;
+    padding: 80px 85px 80px 85px;
+    background-image: url(/public/images/AdobeStock_224508594@2x.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 101%;
+  }
+
+
+  .banner-content {
+    display: block;
+     width: 40%;
+  }
+
+  .banner-heading {
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 30px;
+    color: #1F3951;
+  }
+
+  .banner-subheading {
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    color: #406C93;
+  }
+
+  .banner-button {
+    font-family: 'DM Sans';
+    font-weight: bold;
+    font-size: 13px;
+    color: #406C93;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    height: 50px;
+    padding: 15px 18px;
+    margin-top: 20px;
+  }
+
+  .banner-button:hover {
+    
+    color: #fff;
+    background-color: #406C93;
+    
+  }
+
+  /*Responsive*/
+
+
+  @media (max-width: 1024px) {
+    .banner-container {
+      background-size: 300%;
+      padding: 60px 40px; 
+    }
+  
+    .banner-content {
+      width: 80%; 
+    }
+  
+    .banner-heading {
+      font-size: 24px;
+    }
+  
+    .banner-subheading {
+      font-size: 16px; 
+    }
+  }
+  
+ 
+  @media (max-width: 767px) {
+    .banner-container {
+      background-size: 300%;
+      padding: 40px 20px; 
+    }
+  
+    .banner-content {
+      width: 100%; 
+    }
+  
+    .banner-heading {
+      font-size: 20px; 
+    }
+  
+    .banner-subheading {
+      font-size: 14px; 
+    }
+  
+    .banner-button {
+      width: 100%; 
+      padding: 15px 0; 
+    }
+  }

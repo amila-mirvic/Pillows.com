@@ -1,0 +1,93 @@
+.hero {
+    background-image: url(/public/images/AdobeStock_277241798.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    background-position: center;
+    text-align: start;
+    position: relative; 
+}
+
+body {
+        width:100%;
+        overflow-x:hidden;
+        overflow-y:hidden;
+}
+
+.call-to-action {
+    width: 50%;
+    padding-top: 10%;
+    padding-left: 80px;
+    position: relative; 
+    font-family: 'DM Sans';
+}
+
+.hero-heading {
+    color: #1F3951;
+    font-size: 52px;
+    font-weight: bold;
+    
+}
+
+.hero-italic {
+    font-family: 'Bodoni Moda';
+    font-style: italic;
+    color: #406C93;
+    font-size: 24px;
+}
+
+.hero-paragraph {
+    font-size: 16px;
+    color: #1F3951;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    color: #406C93;
+    border: 2px solid #406C93;
+    border-radius: 4px;
+    font-family: 'DM Sans';
+    font-size: 13px;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.button:hover {
+    color: #fff;
+    background-color: #406C93;
+}
+
+/*Responsive*/
+
+@media (max-width: 768px) {
+    .hero {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    .call-to-action {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+        position: static; 
+        top: unset; 
+        left: unset; 
+        transform: none;
+        box-sizing: border-box;
+    }
+
+    .dual-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        height: 50px;
+        margin: 10px 0;
+    }
+}
+
