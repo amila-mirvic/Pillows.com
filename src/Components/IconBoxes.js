@@ -1,5 +1,5 @@
 import React from 'react';
-import './IconBoxes.css'; // Ensure to link this CSS file
+import './IconBoxes.css'; 
 
 const IconBox = ({ icon, iconboxitemheading, iconboxitemdescription }) => (
   <div className="icon-box">

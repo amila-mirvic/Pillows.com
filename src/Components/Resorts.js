@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Resorts.css'; // External CSS file for styling
+import './Resorts.css'; 
 
 const Resorts = () => {
   return (

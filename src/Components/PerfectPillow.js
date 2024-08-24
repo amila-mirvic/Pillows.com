@@ -10,10 +10,17 @@ const productsData = [
 
 const PerfectPillow = () => {
   const [filteredProducts, setFilteredProducts] = useState(productsData);
+  const [activeFilter, setActiveFilter] = useState('Back Sleeper');
 
-  const filterProducts = (filter) => {
-    const filtered = productsData.filter(product => product.badge.toLowerCase() === filter.toLowerCase());
+  const filterProducts = (filter, label) => {
+    let filtered;
+    if (label === 'Side Sleeper') {
+      filtered = productsData.slice(0, 2); 
+    } else {
+      filtered = filter ? productsData.filter(product => product.badge.toLowerCase() === filter.toLowerCase()) : productsData;
+    }
     setFilteredProducts(filtered);
+    setActiveFilter(label);
   };
 
   return (
@@ -22,10 +29,30 @@ const PerfectPillow = () => {
       <h2 className='perfect-heading'>What kind of sleeper are you?</h2>
 
       <div className="filters">
-        <button className="active" onClick={() => setFilteredProducts(productsData)}>Back Sleeper</button>
-        <button onClick={() => filterProducts('')}>Side Sleeper</button>
-        <button onClick={() => filterProducts('MARRIOTT®')}>Stomach Sleeper</button>
-        <button onClick={() => filterProducts('FEATURED AT MANY HOTELS')}>All Positions Sleeper</button>
+        <button
+          className={activeFilter === 'Back Sleeper' ? 'active' : ''}
+          onClick={() => filterProducts('', 'Back Sleeper')}
+        >
+          Back Sleeper
+        </button>
+        <button
+          className={activeFilter === 'Side Sleeper' ? 'active' : ''}
+          onClick={() => filterProducts('', 'Side Sleeper')}
+        >
+          Side Sleeper
+        </button>
+        <button
+          className={activeFilter === 'Stomach Sleeper' ? 'active' : ''}
+          onClick={() => filterProducts('MARRIOTT®', 'Stomach Sleeper')}
+        >
+          Stomach Sleeper
+        </button>
+        <button
+          className={activeFilter === 'All Positions Sleeper' ? 'active' : ''}
+          onClick={() => filterProducts('FEATURED AT MANY HOTELS', 'All Positions Sleeper')}
+        >
+          All Positions Sleeper
+        </button>
       </div>
 
       <div className="products">
