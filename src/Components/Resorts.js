@@ -70,7 +70,6 @@ const Carousels = () => {
           paragraph={items[currentIndex].paragraph}
           additionalParagraph={items[currentIndex].additionalParagraph}
           originalPrice={items[currentIndex].originalPrice}
-          isFirstItem={currentIndex === 0}
         />
       </div>
       <div className="carousel second-carousel">
@@ -81,7 +80,6 @@ const Carousels = () => {
           paragraph={items[(currentIndex + 1) % items.length].paragraph}
           additionalParagraph={items[(currentIndex + 1) % items.length].additionalParagraph}
           originalPrice={items[(currentIndex + 1) % items.length].originalPrice}
-          isFirstItem={false}
         />
       </div>
       <div className="carousel-controls">
@@ -92,18 +90,18 @@ const Carousels = () => {
   );
 };
 
-const CarouselItem = ({ imageSrc, carouselbadgeText, heading, paragraph, additionalParagraph, originalPrice, isFirstItem }) => {
+const CarouselItem = ({ imageSrc, carouselbadgeText, heading, paragraph, additionalParagraph, originalPrice }) => {
   return (
     <div className="carousel-item">
       <div className="image-container">
         <img src={imageSrc} alt={heading} />
-        <div className={`carouselbadge ${isFirstItem ? 'red-badge' : 'blue-badge'}`}>{carouselbadgeText}</div>
+        <div className={`carouselbadge ${carouselbadgeText === '5% OFF' ? 'red-badge' : 'blue-badge'}`}>{carouselbadgeText}</div>
       </div>
       <h3 className='resort-item-title'>{heading}</h3>
       <p className='resort-item-description'>{paragraph}</p>
       <div className="price-container">
-        <p className={`resort-item-price ${isFirstItem ? 'red-price' : 'blue-price'}`}>{additionalParagraph}</p>
-        {isFirstItem && <p className='resort-item-price original-price'>{originalPrice}</p>}
+        <p className={`resort-item-price ${carouselbadgeText === '5% OFF' ? 'red-price' : 'blue-price'}`}>{additionalParagraph}</p>
+        {carouselbadgeText === '5% OFF' && <p className='resort-item-price original-price'>{originalPrice}</p>}
       </div>
     </div>
   );
